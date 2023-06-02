@@ -1,5 +1,3 @@
-package exercise1;
-
 import static exercise1.Card.SUITS;
 import java.util.Random;
 import java.util.Scanner;
@@ -8,9 +6,9 @@ import java.util.Scanner;
  * A class that fills a hand of 7 cards with random Card Objects and then asks the user to pick a card.
  * It then searches the array of cards for the match to the user's card. 
  * To be used as starting code in Exercise
- *
- * @author dancye
- * @author Paul Bonenfant Jan 25, 2022 
+ * 
+ * @author payashbe
+ * @author Yash Patel  May , 2022 
  */
 public class CardTrick {
     
@@ -61,22 +59,13 @@ public class CardTrick {
         return SUITS[index];
     } 
 
-    
-
-
-        
-    }
-
     /**
      * A simple method to print out personal information. Follow the instructions to 
      * replace this information with your own.
      * @author Yash Patel May 2023
-     * I'am Done
+     * I am Done
      */
-
-    
     private static void printInfo() {
-    
         System.out.println("Congratulations, you guessed right!");
         System.out.println();
         
@@ -86,17 +75,14 @@ public class CardTrick {
         System.out.println("My career ambitions:");
         System.out.println("-- Be more active in Learning");
         System.out.println("-- Have a semester with full focus on study");
-	System.out.println();	
+        System.out.println();	
 
         System.out.println("My hobbies:");
         System.out.println("-- Driving");
         System.out.println("-- Volleyball");
         System.out.println("-- Hiking");
-       
 
         System.out.println();
-        
-    
     }
-
 }
+
