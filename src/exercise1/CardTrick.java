@@ -1,5 +1,9 @@
 package exercise1;
 
+import static exercise1.Card.SUITS;
+import java.util.Random;
+import java.util.Scanner;
+
 /**
  * A class that fills a hand of 7 cards with random Card Objects and then asks the user to pick a card.
  * It then searches the array of cards for the match to the user's card. 
@@ -33,7 +37,32 @@ public class CardTrick {
         userCard.setValue(userValue);
         userCard.setSuit(SUITS[userSuit - 1]);
 
-        
+        boolean matchFound = false;
+        for (Card card : hand) {
+            if (card.getValue() == userCard.getValue() && card.getSuit().equals(userCard.getSuit())) {
+                matchFound = true;
+                break;
+            }
+        }
+
+        if (matchFound) {
+            printInfo();
+        }
+    }
+
+    private static int getRandomValue() {
+        Random random = new Random();
+        return random.nextInt(13) + 2;
+    }
+
+    private static String getRandomSuit() {
+        Random random = new Random();
+        int index = random.nextInt(4);
+        return SUITS[index];
+    } 
+
+    
+
 
         
     }
@@ -42,7 +71,10 @@ public class CardTrick {
      * A simple method to print out personal information. Follow the instructions to 
      * replace this information with your own.
      * @author Yash Patel May 2023
+     * I am Done
      */
+
+    
     private static void printInfo() {
     
         System.out.println("Congratulations, you guessed right!");
